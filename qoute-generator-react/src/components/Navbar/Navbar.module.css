@@ -1,0 +1,59 @@
+.navbar{
+    height: calc(10vh - 1px);
+    width: 90%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(0, 0, 89, 0.2);
+
+
+    /* background-color: rgb(219, 117, 117); */
+}
+
+.left_nav{
+    display: flex;
+    /* height: auto; */
+    align-items: center;
+    gap: 10px;
+}
+
+.logo{
+    font-size: 24px;
+    text-decoration: none;
+    color: rgb(7, 7, 69);
+    /* display: inline-block; */
+}
+
+.company_name{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: rgb(7, 7, 69);
+    text-decoration: none;
+}
+
+.searchbar{
+    width: 300px;
+    height: 3.8vh;
+    border-radius: 5px;
+    padding: 0 10px;
+    border: 1px solid rgba(0, 0, 89, 0.2);
+}
+.searchbar:focus{
+    outline: none;
+    border: 1px solid rgba(0, 0, 89, 0.4);
+}
+
+
+@media only screen and (max-width: 600px) {
+    .searchbar{
+        display: none;
+    }
+    .navbar{
+        justify-content: center;
+    }
+}

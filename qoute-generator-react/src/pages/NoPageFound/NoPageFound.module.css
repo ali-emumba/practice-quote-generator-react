@@ -1,0 +1,26 @@
+.wrapper{
+    min-height: 90vh;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+    /* background-color: aqua; */
+    color: rgb(27, 27, 91);
+}
+
+
+.go_back{
+    padding: 15px 30px;
+    background-color:rgb(27, 27, 91);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: 0.25s ease-in-out;
+}
+.go_back:hover{
+    background-color:rgb(37, 37, 121);
+}
