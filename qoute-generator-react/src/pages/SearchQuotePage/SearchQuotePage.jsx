@@ -2,10 +2,11 @@ import { useState } from "react";
 import styles from "./SearchQuotePage.module.css";
 import axios from "axios";
 import {useDispatch, useSelector} from 'react-redux';
-import { quotesAdded, todoDeleted } from '../../slices/quotesSlice'
+import { quotesAdded } from '../../slices/quotesSlice'
 
 import { FiSearch } from "react-icons/fi";
 import { FaFilter } from "react-icons/fa";
+import QuotesList from "../../components/QuotesList/QuotesList";
 
 const SearchQuotePage = () => {
   const filters = [
@@ -62,8 +63,6 @@ const SearchQuotePage = () => {
             console.log(payload)
 
             dispatch(quotesAdded(payload))
-
-            // setTimeout(()=>dispatch(todoDeleted()), 10000)
           })
           .catch((err) => {
             console.log(err);
@@ -100,6 +99,8 @@ const SearchQuotePage = () => {
         </div>
       </div>
 
+
+      <QuotesList />
     </div>
   );
 };
