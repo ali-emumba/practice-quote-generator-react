@@ -10,7 +10,7 @@ function QuotesList() {
     const renderedQuoteCards = quotesData.map(quote => {
         // console.log(quote.content);
         return(
-        <QuoteCard  />
+        <QuoteCard author={quote.author} content={quote.content} tags={quote.tags} />
         )
     })
 

@@ -1,3 +1,52 @@
-.quote_list_wrapper{
-    background-color: aqua;
+
+.card{
+    width: 100%;
+    /* background-color: antiquewhite; */
+    margin-bottom: 10px;
+    border: 1px solid rgba(0, 0, 89, 0.2);
+    border-radius: 10px;
+}
+.card_wrapper{
+    padding: 10px 80px;
+}
+.author{
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 600;
+    color: rgba(0, 0, 89, 0.6);
+}
+.quote{
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 600;
+    color: rgb(0, 0, 89);
+}
+.tags{
+    border-top: 1px solid rgba(0, 0, 89, 0.2);
+    padding-top: 15px;
+    /* text-align: right; */
+    font-size: 14px;
+    color: rgb(0, 0, 89);
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.tag{
+    border: 1px solid rgba(0, 0, 89, 0.2);
+    padding: 5px 10px;
+    border-radius: 20px/15px;
+    transition: 0.25s all ease-in-out;
+}
+.tag:hover{
+    background-color: rgb(0, 0, 89);
+    color: white;
+}
+
+
+
+@media only screen and (max-width: 600px){
+    .card_wrapper{
+        padding: 20px 15px;
+    }    
 }

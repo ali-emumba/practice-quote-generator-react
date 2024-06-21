@@ -1,6 +1,8 @@
-.card{
-    height: 40px;
-    width: 100%;
-    background-color: brown;
-    margin-bottom: 10px;
+.quote_list_wrapper{
+    width: 95%;
+    /* background-color: rgb(153, 194, 194); */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
