@@ -1,8 +1,8 @@
 import { useState } from "react";
 import styles from "./SearchQuotePage.module.css";
 import axios from "axios";
-import {useDispatch} from 'react-redux';
-import { quotesAdded } from '../../slices/quotesSlice'
+import {useDispatch, useSelector} from 'react-redux';
+import { quotesAdded, todoDeleted } from '../../slices/quotesSlice'
 
 import { FiSearch } from "react-icons/fi";
 import { FaFilter } from "react-icons/fa";
@@ -63,6 +63,7 @@ const SearchQuotePage = () => {
 
             dispatch(quotesAdded(payload))
 
+            // setTimeout(()=>dispatch(todoDeleted()), 10000)
           })
           .catch((err) => {
             console.log(err);
@@ -70,10 +71,6 @@ const SearchQuotePage = () => {
     }
     
   };
-
-
-
-
 
 
   return (
