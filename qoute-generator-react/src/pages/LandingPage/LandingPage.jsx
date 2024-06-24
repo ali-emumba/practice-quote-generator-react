@@ -9,9 +9,9 @@ const LandingPage = () => {
     const [mainQuote, setMainQuote] = useState('');
     const [author, setAuthor] = useState('');
 
-    // useEffect(() => {
-    //     handleGetRandomQuote();
-    // }, [])
+    useEffect(() => {
+        handleGetRandomQuote();
+    }, [])
 
 
     const handleGetRandomQuote = async() => {

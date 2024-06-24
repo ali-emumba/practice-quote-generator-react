@@ -1,26 +1,24 @@
-import { useSelector } from 'react-redux'
-import styles from './QuotesList.module.css'
-import QuoteCard from '../QuoteCard/QuoteCard'
-
+import { useSelector } from "react-redux";
+import styles from "./QuotesList.module.css";
+import QuoteCard from "../QuoteCard/QuoteCard";
 
 function QuotesList() {
+  const quotesData = useSelector((state) => state.quotes.quotes);
+  // console.log(quotesData)
+  const renderedQuoteCards = quotesData.map((quote) => {
+    // console.log(quote.content);
+    return (
+      <QuoteCard
+        author={quote.author}
+        content={quote.content}
+        tags={quote.tags}
+      />
+    );
+  });
 
-    const quotesData = useSelector(state => state.quotes.quotes)
-    // console.log(quotesData)
-    const renderedQuoteCards = quotesData.map(quote => {
-        // console.log(quote.content);
-        return(
-        <QuoteCard author={quote.author} content={quote.content} tags={quote.tags} />
-        )
-    })
+  console.log(renderedQuoteCards);
 
-    console.log(renderedQuoteCards)
-
-  return (
-    <div className={styles.quote_list_wrapper}>
-        {renderedQuoteCards}
-    </div>
-  )
+  return <div className={styles.quote_list_wrapper}>{renderedQuoteCards}</div>;
 }
 
-export default QuotesList
+export default QuotesList;

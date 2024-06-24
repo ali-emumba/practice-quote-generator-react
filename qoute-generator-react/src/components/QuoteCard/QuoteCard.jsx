@@ -15,7 +15,7 @@ function QuoteCard({author, content, tags}) {
     <div className={styles.card}>
         <div className={styles.card_wrapper}>
         <p className={styles.author}>{author}</p>
-        <p className={styles.quote}>{content}</p>
+        <p className={styles.quote}>" {content} "</p>
         <p className={styles.tags}>{renderedTags}</p>
         </div>
     </div>
