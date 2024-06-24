@@ -9,8 +9,14 @@
     justify-content: center;
     align-items: center;
 
-    padding: 30px 0;
+    /* padding: 30px 0; */
 
+}
+
+.internal_wrapper{
+    width: 100%;
+    height: 100%;
+    padding: 30px 0;
 }
 
 
@@ -105,6 +111,33 @@
 }
 
 
+
+
+@media only screen and (max-width: 1200px){
+    .input{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .filter_wrapper{
+        width: 20%;
+    }
+    .input_submit{
+        height: 30px;
+        width: 30px;
+        font-size: 14px;
+    }
+    .filter_icon{
+        font-size: 16px
+    }
+    .filter{
+        font-size: 14px;
+    }
+    
+.options{
+font-size: 14px;
+}
+}
+
 @media only screen and (max-width: 600px){
     .flex{
         flex-direction: column;
@@ -131,6 +164,9 @@
         font-size: 16px
     }
     .filter{
-        font-size: 16px;
+        font-size: 14px;
     }
 }
+
+
+

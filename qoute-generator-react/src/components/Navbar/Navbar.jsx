@@ -1,17 +1,25 @@
 import { useState } from "react";
 import styles from "./Navbar.module.css";
-import { Link } from "react-router-dom";
+import { Link, createSearchParams, useNavigate } from "react-router-dom";
 
 import { RiChatQuoteLine } from "react-icons/ri";
 
-
 function Navbar() {
   const [searchText, setSearchText] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (searchText) {
       console.log(searchText);
+
+      const temp = searchText;
+      setSearchText("");
+      navigate("/search-for-quote", {
+        state: {
+          query: temp,
+        },
+      });
     }
   };
 
@@ -19,8 +27,7 @@ function Navbar() {
     <nav className={styles.navbar}>
       <div className={styles.left_nav}>
         <Link to={"/"} className={styles.logo}>
-        <RiChatQuoteLine />
-
+          <RiChatQuoteLine />
         </Link>{" "}
         <Link to={"/"} className={styles.company_name}>
           <span className={styles.company_name}>Inspire</span>
